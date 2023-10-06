@@ -5,10 +5,24 @@ import pandas as pd
 import numpy as np
 import io 
 import xgboost
+import os
+
 
 # Use pickle to load in the pre-trained model
-with open('/Users/isadmin/Desktop/研究所課程/包皮/foreskin_app/model/XGB_infect.pickle', 'rb') as f:
-    model = pickle.load(f)
+# with open('/Users/isadmin/Desktop/研究所課程/包皮/foreskin_app/model/XGB_infect.pickle', 'rb') as f:
+#     model = pickle.load(f)
+
+model_path = '/Users/isadmin/Desktop/研究所課程/包皮/foreskin_app/model/XGB_infect.pickle'
+
+if os.path.exists(model_path):
+    with open(model_path, 'rb') as f:
+        # Your code to load the model
+        model = pickle.load(f)
+else:
+    print(f"Model file not found at: {model_path}")
+
+
+
 
 # loaded_model = pickle.load(open("/Users/isadmin/Desktop/研究所課程/包皮/foreskin_app/model/XGB_infect.pickle", "rb"))
 
