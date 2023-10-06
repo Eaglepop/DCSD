@@ -3,3 +3,4 @@ pandas
 xgboost==1.6.2
 numpy
 gunicorn==20.1.1
+pip==23.2.1
