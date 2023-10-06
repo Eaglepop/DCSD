@@ -2,3 +2,4 @@ flask==2.0.3
 pandas
 xgboost==1.7.3
 numpy
+gunicorn==20.1.1
