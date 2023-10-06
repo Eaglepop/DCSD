@@ -2,4 +2,4 @@ flask==2.0.3
 pandas
 xgboost==1.6.2
 numpy
-gunicorn==20.1.1
+gunicorn==23.2.1
