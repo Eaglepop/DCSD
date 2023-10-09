@@ -12,7 +12,7 @@ import os
 # with open('/Users/isadmin/Desktop/研究所課程/包皮/foreskin_app/model/XGB_infect.pickle', 'rb') as f:
 #     model = pickle.load(f)
 
-model_path = '/Users/isadmin/Desktop/研究所課程/包皮/foreskin_app/model/XGB_infect.pickle'
+model_path = '/Users/isadmin/Desktop/研究所課程/包皮/foreskin_app/model/XGB_infect_1.7.3.pickle'
 
 if os.path.exists(model_path):
     with open(model_path, 'rb') as f:
