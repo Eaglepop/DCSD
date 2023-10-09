@@ -6,6 +6,7 @@ import numpy as np
 import io 
 import xgboost
 import os
+from flask_cors import CORS
 
 
 
@@ -29,7 +30,8 @@ else:
 # Initialise the Flask app
 app = flask.Flask(__name__, template_folder='templates')
 
-
+# Enable CORS for all routes
+CORS(app) 
 
 
 # Set up the main route
