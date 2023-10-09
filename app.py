@@ -38,9 +38,13 @@ def main():
     if flask.request.method == 'GET':
         # Just render the initial form, to get input
         return(flask.render_template('main.html'))
+  
+  
     
-@app.route('/predict', methods=['POST'])
-def predict():
+# @app.route('/predict', methods=['POST'])
+# def predict():
+    
+    
     if flask.request.method == 'POST':
         # Extract the input
         Age = flask.request.form['Age']
