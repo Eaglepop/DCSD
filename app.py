@@ -8,11 +8,12 @@ import xgboost
 import os
 
 
-# Use pickle to load in the pre-trained model
-# with open('/Users/isadmin/Desktop/研究所課程/包皮/foreskin_app/model/XGB_infect.pickle', 'rb') as f:
-#     model = pickle.load(f)
 
-model_path = '/Users/isadmin/Desktop/研究所課程/包皮/foreskin_app/model/XGB_infect_1.7.3.pickle'
+
+# Use pickle to load in the pre-trained model
+model_path = '/Users/isadmin/Desktop/研究所課程/包皮/foreskin_app/model/XGB_infect_1.6.2.pickle'
+# model_path = '/Users/isadmin/Desktop/研究所課程/包皮/foreskin_app/model/XGB_infect_1.7.3.pickle'
+
 
 if os.path.exists(model_path):
     with open(model_path, 'rb') as f:
@@ -24,17 +25,12 @@ else:
 
 
 
-# loaded_model = pickle.load(open("/Users/isadmin/Desktop/研究所課程/包皮/foreskin_app/model/XGB_infect.pickle", "rb"))
-
-
-# with open('model/bike_model_xgboost.pkl', 'rb') as f:
-#     model = pickle.load(f)
-
-# model=pickle.load(open('model/XGB_infect.pkl','rb'))
-
 
 # Initialise the Flask app
 app = flask.Flask(__name__, template_folder='templates')
+
+
+
 
 # Set up the main route
 @app.route('/', methods=['GET'])
