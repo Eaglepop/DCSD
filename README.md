@@ -15,6 +15,7 @@ sudo -u http pip install -r requirements.txt
 
 ## 3. Add the following Virtual Host to Apache config
 ```
+Listen 8888
 <VirtualHost *:8888>
 ServerName your.domain.name
 
