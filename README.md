@@ -9,6 +9,7 @@
 ## 2. Create virtualenv and install the dependencies:
 ```
 sudo -u http python -m venv .venv
+source ./.venv/bin/activate
 sudo -u http pip install -r requirements.txt
 ```
 
