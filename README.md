@@ -19,7 +19,7 @@ ServerName your.domain.name
 
 DocumentRoot /path/to/cloned/DCSD
 
-WSGIDaemonProcess DCSD user=http group=http threads=4 python-hame=/srv/http/DCSD/.venv/
+WSGIDaemonProcess DCSD user=http group=http threads=4 python-hame=/path/to/.venv/
 WSGIProcessGroup DCSD
 WSGIApplicationGroup %{GLOBAL}
 WSGIScriptAlias / /path/to/wsgi.py
