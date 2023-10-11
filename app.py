@@ -14,7 +14,7 @@ from flask_cors import CORS
 # Use pickle to load in the pre-trained model
 # model_path = '/Users/isadmin/Desktop/研究所課程/包皮/foreskin_app/model/XGB_infect_1.6.2.pickle'
 # model_path = '/Users/isadmin/Desktop/研究所課程/包皮/foreskin_app/model/XGB_infect_1.7.3.pickle'
-model_path = 'model/XGB_infect_1.6.2.pickle'
+model_path = os.path.dirname(os.path.realpath(__file__)) + os.path.abspath('model/XGB_infect_1.6.2.pickle')
 
 if os.path.exists(model_path):
     with open(model_path, 'rb') as f:
