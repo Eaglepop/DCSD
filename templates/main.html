@@ -27,20 +27,23 @@ form {
                 <br>
                 <br>2. Height:
                 <input name="Height" type="number" required>
+                cm
                 <br>
                 <br>3. Weight:
                 <input name="Weight" type="number" required>
+                kg
                 <br>
                 <br>4. Penis_length:
                 <input name="Penis_length" type="number" required>
+                cm
                 <br>
-                <br>5. Phimosis_Grading:
+                <br>5. Phimosis_Grading (0~5):
                 <input name="Phimosis_Grading" type="number" required>
                 <br>
-                <br>6. Pain_level_D0:
+                <br>6. Pain_level_D0 (0~10):
                 <input name="Pain_level_D0" type="number" required>
                 <br>
-                <br>7. Pain_level_D1:
+                <br>7. Pain_level_D1 (0~10):
                 <input name="Pain_level_D1" type="number" required>
                 <br>
                 <br>
@@ -49,9 +52,25 @@ form {
         </form>
         <br>
         <br>
-        <div class="classification" align="center">
-                <h2 style="color: red" align="center">The Result : {{ classification }}</h2>
-                <h2 style="color: red" align="center">Postoperative Infection Rate : {{ probability }}</h2>
+        <div class="result" align="center">
+            {% if original_input %}
+            <h2>Input Values:</h2>
+                {% for variable, value in original_input.items() %}
+                    {% if variable=='Height' %}
+                        <b>{{ variable }}</b> : {{ value }} cm &nbsp
+                    {% elif variable=='Weight' %}
+                        <b>{{ variable }}</b> : {{ value }} kg &nbsp
+                    {% elif variable=='Penis_length' %}
+                        <b>{{ variable }}</b> : {{ value }} cm &nbsp
+                    {% else %}
+                        <b>{{ variable }}</b> : {{ value }} &nbsp
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+            <h2 style="color: red" align="center">The Result : {{ classification }}</h2>
+
+            <h2 style="color: red" align="center">Postoperative Infection Rate : {{ probability }}</h2>
+
         </div>
 
 
