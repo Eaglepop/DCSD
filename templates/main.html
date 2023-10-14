@@ -53,8 +53,8 @@ form {
         <br>
         <br>
         <div class="result" align="center">
-            {% if original_input %}
             <h2>Input Values:</h2>
+            {% if original_input %}
                 {% for variable, value in original_input.items() %}
                     {% if variable=='Height' %}
                         <b>{{ variable }}</b> : {{ value }} cm &nbsp
