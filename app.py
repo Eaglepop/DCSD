@@ -77,15 +77,33 @@ def main():
         print(probability[1])
         print(classification)
         
+        
+        original_input = {'Age': Age, 'Height': Height, 'Weight': Weight, 
+                          'Penis_length': Penis_length, 'Phimosis_Grading': Phimosis_Grading,
+                          'Pain_level_D0': Pain_level_D0, 'Pain_level_D1': Pain_level_D1}
+        
+        
+        
         if classification==0:
             return render_template('main.html', 
+                                   
+                                   original_input=original_input,
+                                      
                                    classification='Not Infected',
+                                   
                                    probability=probability[1]
                                    )
         else:
-            return render_template('main.html', classification='Infected',
+            return render_template('main.html', 
+                                   
+                                   original_input=original_input,
+                                   
+                                   classification='Infected',
+                                   
                                    probability=probability[1]
                                    )
+
+        
 
         
         # return render_template('main.html', 
