@@ -76,7 +76,8 @@ def main():
         probability=np.array(probability)
         print(probability[1])
         print(classification)
-        
+
+        probability=format(probability[1],'.2%')
         
         original_input = {'Age': Age, 'Height': Height, 'Weight': Weight, 
                           'Penis_length': Penis_length, 'Phimosis_Grading': Phimosis_Grading,
@@ -91,7 +92,7 @@ def main():
                                       
                                    classification='Not Infected',
                                    
-                                   probability=probability[1]
+                                   probability=probability
                                    )
         else:
             return render_template('main.html', 
@@ -100,7 +101,7 @@ def main():
                                    
                                    classification='Infected',
                                    
-                                   probability=probability[1]
+                                   probability=probability
                                    )
 
         
