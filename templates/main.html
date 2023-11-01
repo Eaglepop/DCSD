@@ -18,7 +18,7 @@ form {
     </head>
 
     <body>
-        <h1 align="center">Disposable Circumcision Suture Device (DCSD) infection rate calculator</h1>
+        <h1 align="center">Disposable Circumcision Suture Device (DCSD) postoperative infection rate calculator</h1>
         <form action="/" method="POST">
             <fieldset>
                 <legend>Input values:</legend>
@@ -47,7 +47,7 @@ form {
                 <input name="Pain_level_D1" type="number" required>
                 <br>
                 <br>
-                <input type="submit">
+                <input type="submit" value="Submit">
             </fieldset>
         </form>
         <br>
@@ -67,7 +67,7 @@ form {
                     {% endif %}
                 {% endfor %}
             {% endif %}
-            <h2 style="color: red" align="center">The Result : {{ classification }}</h2>
+            <!-- <h2 style="color: red" align="center">The Result : {{ classification }}</h2> -->
 
             <h2 style="color: red" align="center">Postoperative Infection Rate : {{ probability }}</h2>
 

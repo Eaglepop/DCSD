@@ -66,8 +66,9 @@ def main():
                                                 'Pain_level_D0', 'Pain_level_D1'],
                                        dtype=float,
                                        index=['input'])
-
+        
         # Get the model's prediction
+        print(input_variables)
         classification = model.predict(input_variables)[0]
         probability = model.predict_proba(input_variables)[0]
         # Render the form again, but add in the prediction and remind user
@@ -76,6 +77,9 @@ def main():
         probability=np.array(probability)
         print(probability[1])
         print(classification)
+        
+        
+        probability=format(probability[1],'.2%')
         
         
         original_input = {'Age': Age, 'Height': Height, 'Weight': Weight, 
@@ -91,7 +95,8 @@ def main():
                                       
                                    classification='Not Infected',
                                    
-                                   probability=probability[1]
+                                   probability=probability
+                                   
                                    )
         else:
             return render_template('main.html', 
@@ -100,7 +105,8 @@ def main():
                                    
                                    classification='Infected',
                                    
-                                   probability=probability[1]
+                                   probability=probability
+                                   
                                    )
 
         
